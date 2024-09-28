@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: client-server       # Nome do microsserviço
+  profiles:
+    active: dev
+  config:
+    import: "optional:configserver:"
+  cloud:
+    config:
+      uri: http://localhost:8888  # URL do Config Server
+      fail-fast: true
